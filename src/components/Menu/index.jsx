@@ -1,13 +1,16 @@
-import { NavLink } from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import React from "react";
 
-const Menu = () => {
-  const menu = [];
+
+const Menu = (props) => {
+  const {className, menu} = props
+
+  const classes = 'Menu ' + (className || '');
 
   if (!menu) return null;
 
   return (
-    <nav className="menu">
+    <nav className={classes}>
       <ul>
         {menu.map((el) => (
           <li key={el.id}>

@@ -1,0 +1,70 @@
+.PaperBackground-section {
+
+  > .container {
+    position: relative;
+  }
+
+  img {
+    position: absolute;
+  }
+}
+.PaperBackground {
+  min-height: 755px;
+  box-sizing: border-box;
+  position: relative;
+  padding: 60px 120px 160px;
+  background-color: $background;
+  background-image: url("../../img/background.jpg");
+  background-size: cover;
+  background-repeat: repeat;
+  box-shadow: 0 11px 130px 11px rgba(22, 78, 48, .08);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+  z-index: 1;
+
+  @include sm-block{
+    padding: 40px 34px 100px;
+    min-height: 755px;
+    margin-bottom: 40px;
+  }
+
+  @include xs-block{
+    padding: 20px 6vw 20vw;
+    min-height: calc(100vh - 20px);
+    margin-bottom: 20px;
+  }
+}
+.PaperBackground__branch-left {
+  left: -20%;
+  height: 90%;
+  top: 6%;
+
+  @include sm-block{
+    left: -24%;
+    height: 80%;
+    top: 6%;
+  }
+  @include xs-block{
+      display: none;
+  }
+}
+.PaperBackground__branch-right {
+  right: -20%;
+  height: 70%;
+  top: 30%;
+
+  @include sm-block{
+    right: -20%;
+    height: 50%;
+    top: 50%;
+  }
+  @include xs-block{
+    display: none;
+  }
+}
+.PaperBackground__branch-footer {
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

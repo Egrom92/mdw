@@ -2,7 +2,7 @@
 @import 'scss/config';
 @import './svg/svg';
 
-//@import './fonts/main.scss';
+@import './fonts/stylesheet.scss';
 
 @import './scss/mixins.scss';
 @import './scss/base.scss';
@@ -11,10 +11,12 @@
 @import './components/DebugGrid/DebugGrid.scss';
 @import './components/Logo/Logo.scss';
 @import './components/Menu/Menu.scss';
+@import './components/MobileMenu/MobileMenu.scss';
 @import './components/Burger/Burger.scss';
 @import './components/Checkbox/Checkbox.scss';
 @import './components/Content/Content.scss';
-
+@import './components/PaperBackground/PaperBackground.scss';
+@import './components/Covid/Covid.scss';
 
 
 
@@ -25,4 +27,7 @@
 
 // Pages
 @import './pages/HomePage/HomePage.scss';
+@import './pages/History/History.scss';
+@import './pages/Faq/Faq.scss';
+@import './pages/Gift/Gift.scss';
 

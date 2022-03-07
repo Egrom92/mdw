@@ -1,23 +1,24 @@
-import React, {useEffect, useState} from "react";
-import { Footer, Header } from "../sections";
-import { Search } from "../components";
-import {useSelector} from "react-redux";
-import {useBodyFixToggle} from "../hooks";
+import React from "react";
+import {Header} from "../sections";
+import {PaperBackground} from "../components";
+import {Covid} from "../components";
+import {Error} from "../svg";
+
+
 
 
 const DefaultLayout = (props) => {
-  const {children} = props
+  const {children, className} = props
 
-  const { toggleSearchModal } = useSelector((store) => store.search);
-
-  useBodyFixToggle(toggleSearchModal)
 
   return (
     <>
       <Header/>
-      {children}
-      <Footer />
-      {toggleSearchModal && <Search />}
+      <PaperBackground className={className}>
+        {children}
+      </PaperBackground>
+      <Covid/>
+      <Error/>
     </>
   );
 };

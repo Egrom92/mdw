@@ -1,0 +1,85 @@
+.HomePage {
+  text-align: center;
+  overflow: hidden;
+
+  .PaperBackground {
+    align-items: center;
+  }
+  h1, h1 p {
+    text-align: center;
+  }
+}
+.HomePage__LogoIco {
+  @include wh(130);
+  margin: 0 auto 50px;
+
+  @include xs-block{
+    @include wh(80);
+    margin: 0 auto 40px;
+  }
+}
+.HomePage__content {
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.HomePage__title {
+  margin-bottom: 20px;
+
+  p {
+
+  }
+}
+.HomePage__description {
+  font-family: $font-gabriola, sans-serif;
+  @include fp(35, 30);
+  margin-bottom: 20px;
+
+  @include xs-block{
+    @include fp(25, 20);
+  }
+}
+.HomePage__time {
+  @include fp(30, 25);
+  color: $gold;
+  margin-bottom: 20px;
+
+  @include xs-block{
+    @include fp(20, 15);
+  }
+}
+.HomePage__location {
+  @include fp(25, 25);
+  color: $green;
+
+
+  @include xs-block{
+    @include fp(20, 15);
+  }
+}
+.HomePage__list {
+  margin-top: 30px;
+
+  li {
+    display: flex;
+    flex-direction: column;
+    @include fp(25, 25);
+
+
+    @include xs-block{
+      @include fp(15, 10);
+    }
+
+    &+ li {
+      margin-top: 40px;
+    }
+
+  }
+  .left {
+
+  }
+  .right {
+
+  }
+}

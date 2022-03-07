@@ -1,14 +1,14 @@
 import React from "react";
-import {LogoSmall} from '../../svg'
+import {LogoIco} from '../../svg'
 
 const Logo = (props) => {
   const {className} = props
 
-  const classes = 'Logo ' + (className || '');
+  const classes = 'LogoIco ' + (className || '');
 
   return (
     <a href='/' className={classes}>
-      <LogoSmall className='LogoSmall'/>
+      <LogoIco className='Logo'/>
     </a>
   );
 };

@@ -1,13 +1,27 @@
-.burger-menu-wrap {
+$burgerBar: 2px;
+$burgerBarOpen: 8px;
+$burgerBarColor: $gold;
+$burgerBarOpenColor: $gold;
+
+.Burger {
   display: none;
   margin-left: 24px;
+  z-index: 20;
+  width: 100%;
 
-  @include md-block{
+  @include sm-block{
     display: block;
   };
+  
+  & .container {
+    position: relative;
+  }
 
 }
-.burger-menu {
+.Burger-menu {
+  position: absolute;
+  right: 25px;
+  top: 25px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -27,34 +41,34 @@
     background-color: transparent;
   }
 }
-.burger-menu__bar{
-  height: 3px;
-  background-color: $black;
+.Burger-menu__bar{
+  height: $burgerBar;
+  background-color: $burgerBarColor;
   width: 100%;
   transition: 0.3s all ease-out;
   margin: 0 auto;
 
 
   .menuMobActive & {
-    background-color: $black;
+    background-color: $burgerBarOpenColor;
   }
 }
 .js-burger-menu-active {
 
 }
-.menuMobActive .burger-menu__bar:first-child {
-  transform: translate(0, 5px);
+.menuMobActive .Burger-menu__bar:first-child {
+  transform: translate(0, $burgerBarOpen);
 }
-.menuMobActive .burger-menu__bar:nth-child(2) {
+.menuMobActive .Burger-menu__bar:nth-child(2) {
   width: 0;
 }
-.menuMobActive .burger-menu__bar:last-child {
-  transform: translate(0, -5px);
+.menuMobActive .Burger-menu__bar:last-child {
+  transform: translate(0, -$burgerBarOpen);
 }
 
-.menuMobActive .burger-menu__bar:first-child {
-  transform: translate(0, 5px) rotate(45deg);
+.menuMobActive .Burger-menu__bar:first-child {
+  transform: translate(0, $burgerBarOpen) rotate(45deg);
 }
-.menuMobActive .burger-menu__bar:last-child {
-  transform: translate(0, -5px) rotate(-45deg);
+.menuMobActive .Burger-menu__bar:last-child {
+  transform: translate(0, -$burgerBarOpen) rotate(-45deg);
 }

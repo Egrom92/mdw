@@ -4,6 +4,8 @@ import DebugGrid from './DebugGrid';
 import Burger from './Burger';
 import MobileMenu from './MobileMenu';
 import Content from './Content';
+import PaperBackground from './PaperBackground';
+import Covid from './Covid';
 
 export {
   Logo,
@@ -12,4 +14,6 @@ export {
   Burger,
   MobileMenu,
   Content,
+  PaperBackground,
+  Covid,
 };

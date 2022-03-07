@@ -1,0 +1,161 @@
+.modal {
+  @include anim();
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  z-index: 999;
+  pointer-events: none;
+  font-family: $font-gilroy-l;
+  font-weight: 100;
+  padding: 25px 0;
+  box-sizing: border-box;
+
+  @include xs-block{
+    font-size: 13px;
+  }
+
+  .modalOpen & {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+.modal-content-overflow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+}
+.modal-content-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+  background-color: transparent;
+}
+.modal-content-wrapper {
+  position: relative;
+  max-width: 616px;
+  width: calc(100% - 40px);
+  height: 100%;
+}
+.modal-content {
+  position: relative;
+  z-index: 20;
+  background-color: white;
+  padding: 45px 35px 40px;
+
+  width: 100%;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  overflow: scroll;
+  height: 100%;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .modal-body >*:not(span) {
+    margin-bottom: 20px;
+  }
+  :last-child {
+    margin-bottom: 0;
+  }
+
+  @include xs-block{
+    padding: 25px 15px 20px;
+  }
+
+  h2 {
+    @include fp(22, 30);
+    font-family: $font-gilroy-l;
+    font-weight: 100;
+  }
+  p {
+    font-family: $font-gilroy-l;
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+.close-button {
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  color: $gold;
+  font-size: 40px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 50;
+}
+.close-button:hover {
+  color: $green;
+}
+.show-modal {
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  pointer-events: none;
+}
+.Error__wrapper {
+  position: fixed;
+  z-index: 9;
+  width: 44px;
+  height: 44px;
+  bottom: 3vw;
+  right: 3vw;
+  background-color: #F9F9F6;
+  overflow: hidden;
+  border-radius: 100%;
+  box-shadow: 0 11px 130px 11px rgba(22, 78, 48, .78);
+  cursor: pointer;
+
+  box-shadow: 0 0 0 0 rgba($green, 1);
+  transform: scale(1);
+  animation: pulse 3s infinite;
+
+  @include xs-block{
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.Error {
+  overflow: hidden;
+  border-radius: 100%;
+  position: absolute;
+  width: calc(100% - 14px);
+  height: calc(100% - 14px);
+  stroke: $gold;
+
+  @include center();
+
+  @include xs-block{
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba($green, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba($green, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba($green, 0);
+  }
+}

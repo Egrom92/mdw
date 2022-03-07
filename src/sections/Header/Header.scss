@@ -1,15 +1,24 @@
 .Header-section {
-  padding: 16px 0;
+  @include anim();
+  height: 95px;
+  display: flex;
+  align-items: center;
   position: relative;
   z-index: 20;
+  overflow: hidden;
+
+
+  @include sm-block{
+    height: 0;
+  }
 }
 .Header {
   display: flex;
   justify-content: space-between;
 }
-.Header__Logo {
+.Header__Menu {
 
 }
-.Header__SearchButton {
-
+.Header__Burger {
+  margin-left: auto;
 }

@@ -1,7 +1,7 @@
 $columns: 12;
 $atom: (100% / $columns);
 
-$break_lg: 1440px;
+$break_lg: 1100px;
 $break_md: 1100px;
 $break_sm: 800px;
 $break_xs: 500px;
@@ -70,7 +70,7 @@ $fields_xs: 10px;
 }
 
 @mixin container(){
-    max-width: 1328px;
+    max-width: 720px;
     margin: 0 auto;
     @include container-full();
 }

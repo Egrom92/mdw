@@ -6,12 +6,12 @@ const settings = {
   columns: 12,
   offset: "24px", //Межколонник
   container: {
-    maxWidth: "1328px",
+    maxWidth: "720px",
     fields: "56px", //Отступ по краю контейнера
   },
   breakPoints: {
     lg: {
-      width: "1440px",
+      width: "1100px",
       fields: "40px",
     },
     md: {

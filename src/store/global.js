@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const getInitialState = () => ({
   mobileMenuOpen: false,
+  modalOpen: false,
 });
 
 export const globalSlice = createSlice({
@@ -20,6 +21,13 @@ export const mobileMenuToggle = (params) => async (dispatch) => {
   dispatch(
     setState({
       mobileMenuOpen: params.mobileMenuOpen
+    })
+  );
+};
+export const modalToggle = (params) => async (dispatch) => {
+  dispatch(
+    setState({
+      modalOpen: params.modalOpen
     })
   );
 };

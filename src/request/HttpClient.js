@@ -25,6 +25,8 @@ export default class HttpClient {
     const address = this.getAddress(
       this.defaultParams.api + url + (urlParams && '?' + urlParams)
     );
+    
+    console.log('address ----', address);
     const response = await fetch(address, { method: 'GET' });
     return await response.json();
   }

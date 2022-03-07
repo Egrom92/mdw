@@ -1,8 +1,9 @@
 .MobileMenu {
   @include anim;
   position: absolute;
-  top: 84px;
-  height: calc(100vh - 84px);
+  left: -100%;
+  top: 0;
+  height: 100vh;
   background-color: transparent;
   width: 100%;
   padding-top: 56px;
@@ -11,10 +12,14 @@
   z-index: 10;
   display: none;
 
-  @include xs-block{
-    top: 14vw;
-    height: calc(100vh - 14vw);
-  };
+  @include sm-block{
+      display: block;
+  }
+
+  .menuMobActive & {
+    left: 0;
+    background-color: $beige;
+  }
 
   > .container {
     display: flex;
@@ -23,6 +28,11 @@
   }
 
   .MobileMenu__wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     li {
       & + li {
         margin-top: 32px;
@@ -35,9 +45,16 @@
 
   }
   a {
-    @include anim;
+    @include fp(18, 16);
+    font-family: $font-gabriola;
+    color: $green;
+    text-transform: uppercase;
+
     &:hover {
-      color: $black;
+      color: $gold;
+    }
+    &.active {
+      color: $gold;
     }
   }
   .MobileMenu__footer{

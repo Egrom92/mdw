@@ -1,0 +1,28 @@
+.Gift {
+
+  .PaperBackground {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    @include md-block{
+        flex-direction: column;
+    }
+
+    p {
+      margin: 22px 0;
+      line-height: 19px;
+    }
+  }
+  .LogoIco {
+    margin-left: 20px;
+
+
+    @include md-block{
+      order: -1;
+      margin-left: 0;
+      height: 120px;
+      margin-bottom: 30px;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.Faq__list {
+}
+.Faq__point {
+
+  &+li {
+    margin-top: 30px;
+  }
+}
+.Faq__title {
+  font-family: $font-gilroy-r;
+  @include fp(16, 20);
+  margin-bottom: 10px;
+}
+.Faq__answer {
+  font-family: $font-gilroy-l;
+  font-size: 14px;
+  padding-left: 20px;
+}

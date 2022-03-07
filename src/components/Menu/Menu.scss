@@ -1,18 +1,52 @@
-.menu {
+.Menu {
+  margin: auto;
+
   ul {
     display: flex;
     li {
       & + li {
-        margin-left: 20px;
+        margin-left: 53px;
       }
 
       a {
+        @include fp(18, 16);
+        font-family: $font-gabriola;
+        color: $green;
+        text-transform: uppercase;
 
+        &.active {
+          color: $gold;
+        }
+
+        span {
+          @include sm-block{
+            display: none;
+          };
+        }
+
+        svg {
+          @include anim();
+          display: none;
+          fill: rgba($green, .5);
+          height: 27px;
+          
+          &:hover {
+            fill: $gold;
+          }
+
+          @include sm-block{
+            display: block;
+          };
+        }
+
+        &:hover {
+          color: $gold;
+        }
       }
 
       &.active {
         a {
-          color: $black;
+          color: $gold;
         }
       }
     }
